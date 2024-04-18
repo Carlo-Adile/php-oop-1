@@ -29,16 +29,21 @@ require_once __DIR__ . "/db.php";
         <div class="row">
           <div class="col">
             <div class="card">
-              <ul class="list-group list-group-flush">
-                <!-- <li class="list-group-item" v-for="production in productions" :key="production.id">
-                  <h5>{{ production.title }}</h5>
-                </li> -->
-                <?php foreach ($productions as $production): ?>
-                <li class="list-group-item">
-                  <h5><?= $production->title ?></h5>
-                </li>
-                <?php endforeach; ?>
-              </ul>
+              <div class="card-header">
+                <h3>Lista di film</h3>
+              </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <?php foreach ($productions as $production): ?>
+                      <li class="list-group-item">
+                        <h5><?= $production->title ?></h5>
+                        <small>voto: <?= $production->vote ?>/10</small><br>
+                        <small>lingua: <?= $production->language ?></small>
+                      </li>
+                    <?php endforeach; ?>
+                  </ul>
+                </div>
+              
             </div>
           </div>
         </div>
