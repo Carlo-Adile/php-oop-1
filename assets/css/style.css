@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: #282828;
+  min-height: 100vh;
+}
+#my_header{
+  
+  background-color: #151515;
+}
+#app{
+  
+}
+#my_navHead{
+  font-size: 1.8rem;
+  color: lightgray;
+  font-weight: bold;
+}

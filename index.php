@@ -15,10 +15,34 @@ require_once __DIR__ . "/db.php";
 </head>
 <body>
   
+  <div id="app">
+    <header id="my_header">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="my_navHead">Productions</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-xl py-4">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" v-for="production in productions" :key="production.id">
+                  <h5>{{ production.title }}</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
 
 
-
+  </div>
 
 <!-- axios -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js' integrity='sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==' crossorigin='anonymous' referrerpolicy='no-referrer'></script>
