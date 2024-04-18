@@ -10,7 +10,7 @@ $productions = array(
 );
 
 function getGenreBadge($genre){
-  /* passeremo il parametro production>genre>name da usare come genreName e associare il relativo colore */
+  /* passiamo il parametro production > genre > name da usare come genreName e associare il relativo colore */
   $genreName = array(
     'fantasy' => 'text-bg-primary',
     'horror' => 'text-bg-danger',
@@ -20,8 +20,3 @@ function getGenreBadge($genre){
   return $genreName[$genre] ?? 'text-bg-primary';
 };
 
-/* foreach ($productions as $production) {
-  echo $production->title;
-  echo $production->language;
-  echo $production->vote;
-} */
