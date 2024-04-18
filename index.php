@@ -16,6 +16,7 @@ require_once __DIR__ . "/db.php";
 <body>
   
   <div id="app">
+
     <header id="my_header">
       <nav class="navbar">
         <div class="container-fluid">
@@ -38,7 +39,9 @@ require_once __DIR__ . "/db.php";
                       <li class="list-group-item">
                         <h5><?= $production->title ?></h5>
                         <small>voto: <?= $production->vote ?>/10</small><br>
-                        <small>lingua: <?= $production->language ?></small>
+                        <small>lingua: <?= $production->language ?></small><br>
+                        <span class="badge <?= getGenreBadge($production->genre->name) ?> mt-2"><?= $production->genre->name ?></span>
+
                       </li>
                     <?php endforeach; ?>
                   </ul>
@@ -49,7 +52,6 @@ require_once __DIR__ . "/db.php";
         </div>
       </div>
     </main>
-
 
 
   </div>
