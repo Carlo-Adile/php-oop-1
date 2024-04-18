@@ -9,3 +9,9 @@ $productions = array(
   new Production ('Alien', 'italiano', 9),
 );
 
+
+foreach ($productions as $production) {
+  echo $production->title;
+  echo $production->language;
+  echo $production->vote;
+}

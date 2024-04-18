@@ -12,8 +12,5 @@ class Production
     $this->language = $language;
     $this->vote = $vote;
   }
-  public function __toString()
-  {
-    return "Title: " . $this->title . ", Language: " . $this->language . ", Vote: " . $this->vote;
-  }
+  
 }

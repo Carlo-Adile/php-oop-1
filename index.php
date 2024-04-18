@@ -30,9 +30,14 @@ require_once __DIR__ . "/db.php";
           <div class="col">
             <div class="card">
               <ul class="list-group list-group-flush">
-                <li class="list-group-item" v-for="production in productions" :key="production.id">
+                <!-- <li class="list-group-item" v-for="production in productions" :key="production.id">
                   <h5>{{ production.title }}</h5>
+                </li> -->
+                <?php foreach ($productions as $production): ?>
+                <li class="list-group-item">
+                  <h5><?= $production->title ?></h5>
                 </li>
+                <?php endforeach; ?>
               </ul>
             </div>
           </div>
