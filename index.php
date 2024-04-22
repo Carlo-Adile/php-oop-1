@@ -46,6 +46,13 @@ require_once __DIR__ . "/db.php";
                             <?php else: ?>
                             <small>Film</small><br>
                           <?php endif; ?>
+                          <!-- accedere alle proprietà di Movie extends Products -->
+                          <?php if ($production instanceof Movie): ?>
+                            <!-- corretto -->
+                            <small>Profitti: <?= $production->getProfit() ?></small><br>
+                            <!-- incorretto -->
+                            <small>Durata: <?= $production->getLength() ?></small><br>
+                          <?php endif; ?>
                           <!-- badge -->
                           <span class="badge <?= getGenreBadge($production->genre->name) ?> mt-2"><?= $production->genre->name ?></span>
                           
