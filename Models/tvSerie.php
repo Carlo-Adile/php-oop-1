@@ -4,13 +4,12 @@ require_once __DIR__ . "/Models/production.php";
 require_once __DIR__ . "/Models/genre.php";
 
 class TvSerie extends Production{
-  public $genre;
   public $totalSeason;
 
-  public function __construct($title, $language, $vote, $totalSeason, Genre $genre)
+  public function __construct($title, $language, $vote, Genre $genre, TotalSeason $totalSeason,)
   {
     $this->totalSeason = $totalSeason;
-    $this->genre = $genre;
+    
     parent::__construct($title, $language, $vote, $genre);
   }
   /* getter */

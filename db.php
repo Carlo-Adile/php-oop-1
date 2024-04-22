@@ -10,7 +10,7 @@ $productions = array(
   new Production ('Vampire Hunder D Bloodlust', 'Giapponese', 8, new Genre ('horror')),
 );
 
-$productions[] = new TvSerie('Breaking Bad', 'English', 9.5, 5, new Genre ('thriller'));
+$productions[] = new TvSerie('Breaking Bad', 'English', 9.5, new TvSerie(5), new Genre ('thriller'));
 
 function getGenreBadge($genre){
   /* passiamo il parametro production > genre > name da usare come genreName e associare il relativo colore badge */
