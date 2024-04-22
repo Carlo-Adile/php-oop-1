@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/Models/production.php";
 require_once __DIR__ . "/Models/genre.php";
+require_once __DIR__ . "/Models/tvSerie.php";
 
 $productions = array(
   new Production ('Il castello errante di Howl', 'Italiano', 10, new Genre ('fantasy')),
@@ -9,8 +10,10 @@ $productions = array(
   new Production ('Vampire Hunder D Bloodlust', 'Giapponese', 8, new Genre ('horror')),
 );
 
+$productions[] = new TvSerie('Breaking Bad', 'English', 9.5, 5, new Genre ('thriller'));
+
 function getGenreBadge($genre){
-  /* passiamo il parametro production > genre > name da usare come genreName e associare il relativo colore */
+  /* passiamo il parametro production > genre > name da usare come genreName e associare il relativo colore badge */
   $genreName = array(
     'fantasy' => 'text-bg-primary',
     'horror' => 'text-bg-danger',
