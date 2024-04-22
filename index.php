@@ -36,13 +36,20 @@ require_once __DIR__ . "/db.php";
                 <div class="card-body">
                   <ul class="list-group list-group-flush">
                     <?php foreach ($productions as $production): ?>
-                      <li class="list-group-item">
-                        <h5><?= $production->title ?></h5>
-                        <small>voto: <?= $production->vote ?>/10</small><br>
-                        <small>lingua: <?= $production->language ?></small><br>
-                        <span class="badge <?= getGenreBadge($production->genre->name) ?> mt-2"><?= $production->genre->name ?></span>
-
-                      </li>
+                        <li class="list-group-item">
+                          <h5><?= $production->title ?></h5>
+                          <small>voto: <?= $production->vote ?>/10</small><br>
+                          <small>lingua: <?= $production->language ?></small><br>
+                          <!-- tipo di produzione -->
+                          <?php if ($production instanceof TvSerie): ?>
+                              <small>Serie TV</small><br>
+                            <?php else: ?>
+                            <small>Film</small><br>
+                          <?php endif; ?>
+                          <!-- badge -->
+                          <span class="badge <?= getGenreBadge($production->genre->name) ?> mt-2"><?= $production->genre->name ?></span>
+                          
+                        </li>
                     <?php endforeach; ?>
                   </ul>
                 </div>
